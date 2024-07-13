@@ -7,14 +7,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import responseDesignImages from "@/assets/looking-ahead.png";
-import intuitiveUserInterface from "@/assets/reflecting.png";
-import aiPoweredInsights from "@/assets/growth.png";
+// import responseDesignImages from "@/assets/looking-ahead.png";
+// import intuitiveUserInterface from "@/assets/reflecting.png";
+// import aiPoweredInsights from "@/assets/growth.png";
 
 interface FeatureProps {
   title: string;
   description: string;
-  image: string;
+  image?: string;
 }
 
 const features: FeatureProps[] = [
@@ -22,19 +22,16 @@ const features: FeatureProps[] = [
     title: "Step 1",
     description:
       "Hoàn thiện bài kiểm tra của lộ trình đào tạo.",
-    image: responseDesignImages,
   },
   {
     title: "Step 2",
     description:
       "Bảo vệ dự án, demo các chức năng làm được.",
-    image: intuitiveUserInterface,
   },
   {
     title: "Step 3",
     description:
       "Trả lời phỏng vấn dựa trên những gì đã làm được.",
-    image: aiPoweredInsights,
   },
 ];
 
@@ -78,7 +75,7 @@ export const Features = () => {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map(({ title, description, image }: FeatureProps) => (
+        {features.map(({ title, description }: FeatureProps) => (
           <Card key={title}>
             <CardHeader>
               <CardTitle>{title}</CardTitle>
@@ -87,11 +84,11 @@ export const Features = () => {
             <CardContent>{description}</CardContent>
 
             <CardFooter>
-              <img
-                src={image}
-                alt="About feature"
-                className="w-[200px] lg:w-[300px] mx-auto"
-              />
+              {/*<img*/}
+              {/*  src={image}*/}
+              {/*  alt="About feature"*/}
+              {/*  className="w-[200px] lg:w-[300px] mx-auto"*/}
+              {/*/>*/}
             </CardFooter>
           </Card>
         ))}

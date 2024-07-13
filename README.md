@@ -1,7 +1,7 @@
 ## Sections
 
 
-- [x] Navbar
+- [x] NavbarMain
 
 - [x] Sidebar(mobile)
 
@@ -25,7 +25,7 @@
 
 - [x] Team
 
-- [x] Pricing -  
+- [x] Options -  
 
 - [x] Support -> support
 

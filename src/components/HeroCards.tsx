@@ -30,12 +30,12 @@ export const HeroCards = () => {
                     </Avatar>
 
                     <div className="flex flex-col">
-                        <CardTitle className="text-lg">Nguyễn Anh Dũng</CardTitle>
-                        <CardDescription>@dungna29</CardDescription>
+                        <CardTitle className="text-lg">Nguyễn Hoàng Tiến</CardTitle>
+                        <CardDescription>@tiennh21</CardDescription>
                     </div>
                 </CardHeader>
 
-                <CardContent>Người sáng lập xưởng dự án</CardContent>
+                <CardContent>Tích lũy kinh nghiệm qua các dự án thực tế tại xưởng dự án.</CardContent>
             </Card>
 
             {/* Team */}
@@ -119,32 +119,32 @@ export const HeroCards = () => {
                 </CardFooter>
             </Card>
 
-            {/* Pricing */}
+            {/* Options */}
             <Card
                 className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
                 <CardHeader>
                     <CardTitle className="flex item-center justify-between">
-                        Xưởng
+                        Tuyển Dụng
                         <Badge
                             variant="secondary"
                             className="text-sm text-primary"
                         >
-                            FPLHN-FACTORY
+                            Members
                         </Badge>
                     </CardTitle>
                     <div>
-                        <span className="text-3xl font-bold">Dự Án</span>
-                        <span className="text-muted-foreground"> / Tuyển thành viên</span>
+                        <span className="text-3xl font-bold">15 vị trí</span>
+                        <span className="text-muted-foreground"> / PTPM</span>
                     </div>
 
                     <CardDescription>
-                        Dành cho sinh viên kỳ 1 - 2 ngành phát triển phần mềm.
+                        Dành cho sinh viên kỳ 1 - 4 ngành phát triển phần mềm.
                     </CardDescription>
                 </CardHeader>
 
                 <CardContent>
-                    <a href={"#options"}>
-                        <Button className="w-full">Tham gia ngay</Button>
+                    <a href={"#recruitment"}>
+                        <Button className="w-full">Ứng tuyển ngay</Button>
                     </a>
                 </CardContent>
 

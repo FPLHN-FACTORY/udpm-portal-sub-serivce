@@ -22,6 +22,7 @@ interface PricingProps {
   description: string;
   buttonText: string;
   benefitList: string[];
+  href: string;
 }
 
 const pricingList: PricingProps[] = [
@@ -30,26 +31,28 @@ const pricingList: PricingProps[] = [
     popular: 1,
     price: "Kỳ 1 - 2",
     description: "Tham gia training theo kế hoạch có sẵn.",
-    buttonText: "Tham gia ngay",
+    buttonText: "Ứng tuyển ngay",
     benefitList: [
       "Training theo nhóm 5 người",
       "Có bàn làm việc theo nhóm",
       "Nâng cao khả năng thực hành giao tiếp",
       "Nhận hỗ trợ từ FPLHN-FACTORY",
     ],
+    href: "#recruiment-form",
   },
   {
-    title: "Thử Thách",
+    title: "Làm Bài Kiểm Tra ",
     popular: 0,
     price: "Kỳ 1 - 4",
     description: "Làm bài thi để vượt qua vòng sơ loại.",
-    buttonText: "Đăng ký ngay",
+    buttonText: "Ứng tuyển ngay",
     benefitList: [
       "Thử thách bản thân với đề siêu khó",
       "Công nghệ, tính năng mới",
       "Nâng cao kiến thức chuyên môn",
       "Nhận hỗ trợ từ FPLHN-FACTORY",
     ],
+    href: "#recruiment-form",
   },
   {
     title: "Nhận Thêm Thông Tin",
@@ -64,25 +67,24 @@ const pricingList: PricingProps[] = [
       // "Upto 10 pages",
       "Nhận hỗ trợ từ FPLHN-FACTORY",
     ],
+    href: "#recruiment-form",
   },
 ];
 
-export const Pricing = () => {
+export const Options = () => {
   return (
     <section
       id="options"
       className="container py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Nhận
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
-          Hỗ Trợ{" "}
+          Ứng Tuyển Vị Trí Làm Việc Tại FPLHN-FACTORY{" "}
         </span>
-        Từ FPLHN-FACTORY
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Hưởng lợi ích từ việc tham gia training ngay.
+        Thông tin chi tiết tuyển dụng thành viên tại FPLHN-FACTORY.
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pricingList.map((pricing: PricingProps) => (
@@ -102,7 +104,7 @@ export const Pricing = () => {
                     variant="secondary"
                     className="text-sm text-primary"
                   >
-                    Most popular
+                    Phổ biến nhất
                   </Badge>
                 ) : null}
               </CardTitle>
@@ -115,7 +117,7 @@ export const Pricing = () => {
             </CardHeader>
 
             <CardContent>
-              <a href={"#support"}><Button className="w-full">{pricing.buttonText}</Button></a>
+              <a href={pricing.href}><Button className="w-full">{pricing.buttonText}</Button></a>
             </CardContent>
 
             <hr className="w-4/5 m-auto mb-4" />

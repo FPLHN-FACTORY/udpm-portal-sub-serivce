@@ -24,7 +24,7 @@ export const About = () => {
                 FPLHN-FACTORY
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Xưởng dự án được thành lập ngày 01/01/2021 bởi thầy Nguyễn Anh Dũng
+                Xưởng dự án được thành lập ngày 01/01/2021 xây dựng bởi các thầy cô bộ môn Ứng Dụng Phần Mềm
               </p>
             </div>
 

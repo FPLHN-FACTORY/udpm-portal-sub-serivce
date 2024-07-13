@@ -1,5 +1,5 @@
 import {
-    LogoIconBig1,
+    LogoIconBig1, LogoIconBig2, LogoIconBig3,
 } from "@/components/Icons.tsx";
 
 interface SponsorProps {
@@ -13,11 +13,11 @@ const sponsors: SponsorProps[] = [
         name: "",
     },
     {
-        icon: <LogoIconBig1/>,
+        icon: <LogoIconBig3/>,
         name: "",
     },
     {
-        icon: <LogoIconBig1/>,
+        icon: <LogoIconBig2/>,
         name: "",
     },
     // {

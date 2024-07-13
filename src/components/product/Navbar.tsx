@@ -13,28 +13,27 @@ import {
 } from "@/components/ui/sheet";
 
 import {GitHubLogoIcon} from "@radix-ui/react-icons";
-import {buttonVariants} from "./ui/button";
+import {buttonVariants} from "@/components/ui/button";
 import {Menu} from "lucide-react";
-import {ModeToggle} from "./mode-toggle";
-import {LogoIcon} from "./Icons";
+import {ModeToggle} from "@/components/mode-toggle";
+import {LogoIcon} from "@/components/Icons";
+import {Link, useNavigate} from "react-router-dom";
 
 interface RouteProps {
     href: string;
     label: string;
 }
 
+const env = import.meta.env;
+
 const routeList: RouteProps[] = [
     {
-        href: "#main",
+        href: env.VITE_APP_BASE,
         label: "Trang chủ",
     },
     {
-        href: "#about",
-        label: "Về chúng tôi",
-    },
-    {
-        href: "#products",
-        label: "Sản phẩm",
+        href: "#recruiment-form",
+        label: "Ứng tuyển",
     },
     {
         href: "#faq",
@@ -44,19 +43,22 @@ const routeList: RouteProps[] = [
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    const navigation = useNavigate();
+
     return (
         <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
             <NavigationMenu className="mx-auto">
                 <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
                     <NavigationMenuItem className="font-bold flex">
-                        <a
+                        <Link
+                            to={"/"}
                             rel="noreferrer noopener"
-                            href="/"
                             className="ml-2 font-bold text-xl cursor-pointer select-none grid justify-center align-middle gap-2 grid-flow-col"
                         >
                             <LogoIcon/>
                             FPLHN-FACTORY
-                        </a>
+                        </Link>
                     </NavigationMenuItem>
 
                     {/* mobile */}
@@ -87,8 +89,10 @@ export const Navbar = () => {
                       <a
                           rel="noreferrer noopener"
                           key={label}
-                          href={href}
-                          onClick={() => setIsOpen(false)}
+                          onClick={() => {
+                              setIsOpen(false)
+                              navigation(href);
+                          }}
                           className={buttonVariants({variant: "ghost"})}
                       >
                           {label}
@@ -109,7 +113,6 @@ export const Navbar = () => {
               </SheetContent>
             </Sheet>
           </span>
-
                     {/* desktop */}
                     <nav className="hidden md:flex gap-2">
                         {routeList.map((route: RouteProps, i) => (
@@ -127,16 +130,14 @@ export const Navbar = () => {
                     </nav>
 
                     <div className="hidden md:flex gap-2">
-                        <a
+                        <button
                             rel="noreferrer noopener"
-                            href="https://github.com/FPLHN-FACTORY"
-                            target="_blank"
                             className={`border ${buttonVariants({variant: "secondary"})}`}
+                            onClick={() => navigation("/products")}
                         >
                             <GitHubLogoIcon className="mr-2 w-5 h-5"/>
-                            Github
-                        </a>
-
+                            Sản phẩm
+                        </button>
                         <ModeToggle/>
                     </div>
                 </NavigationMenuList>

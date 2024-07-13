@@ -82,7 +82,7 @@ export const FAQ = () => {
                 Vẫn còn thắc mắc?{" "}
                 <a
                     rel="noreferrer noopener"
-                    href="#support"
+                    href="#recruiment-form"
                     className="text-primary transition-all border-primary hover:border-b-2"
                 >
                     Contact us

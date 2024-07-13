@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/landing-page-fplhn-factory/",
+  base: "/udpm-portal-sub-serivce/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

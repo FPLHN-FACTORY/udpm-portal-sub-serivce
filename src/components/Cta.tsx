@@ -12,7 +12,7 @@ export const Cta = () => {
             Phát Triển
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
               {" "}
-              Dự Án & Cộng Đồng{" "}
+              Dự Án & Cộng Đồng
             </span>
 
           </h2>
@@ -22,10 +22,10 @@ export const Cta = () => {
         </div>
 
         <div className="space-y-4 lg:col-start-2">
-          <a href={"#options"}>
+          <a href={"#recruitment"}>
             <Button className="w-full md:mr-4 md:w-auto">Tham gia ngay</Button>
           </a>
-          <a href={"#products"}>
+          <a href={"#team"}>
             <Button variant="outline" className="w-full md:w-auto">
               Tìm hiểu thêm
             </Button>

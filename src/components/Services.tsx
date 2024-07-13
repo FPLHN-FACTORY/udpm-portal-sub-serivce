@@ -1,6 +1,6 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
-import clientServiceImages from "@/assets/cube-leg.png";
+import clientServiceImages from "@/assets/images/teacher/tiennh21/svg/tiennh21-fulloptions.svg";
 
 interface ServiceProps {
   title: string;

@@ -1,40 +1,24 @@
-import { About } from "./components/About";
-import { Cta } from "./components/Cta";
-import { FAQ } from "./components/FAQ";
-import { Features } from "./components/Features";
-import { Footer } from "./components/Footer";
-import { Hero } from "./components/Hero";
-import { HowItWorks } from "./components/HowItWorks";
-import { Navbar } from "./components/Navbar";
-import { Support } from "./components/Support.tsx";
-import { Pricing } from "./components/Pricing";
-import { ScrollToTop } from "./components/ScrollToTop";
-import { Services } from "./components/Services";
-import { Sponsors } from "./components/Sponsors";
-import { Team } from "./components/Team";
-import { Testimonials } from "./components/Testimonials";
 import "./App.css";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {MainRouter} from "@/layout/main/MainRouter.tsx";
+import {ScrollToTop} from "@/components/ScrollToTop.tsx";
+import {ProductsRouter} from "@/layout/product/ProductsRouter.tsx";
+import {ProductDetailsRouter} from "@/layout/product/details/ProductDetailsRouter.tsx";
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <Sponsors />
-      <About />
-      <HowItWorks />
-      <Features />
-      <Services />
-      <Cta />
-      <Testimonials />
-      <Team />
-      <Pricing />
-      <Support />
-      <FAQ />
-      <Footer />
-      <ScrollToTop />
-    </>
-  );
+    const env = import.meta.env;
+    return (
+        <>
+            <BrowserRouter basename={env.VITE_APP_BASE}>
+                <Routes>
+                    <Route path="/" element={<MainRouter/>}/>
+                    <Route path="products" element={<ProductsRouter/>}/>
+                    <Route path="products/module" element={<ProductDetailsRouter/>}/>
+                </Routes>
+                <ScrollToTop/>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;

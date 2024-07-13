@@ -19,7 +19,7 @@ export const Support = () => {
           </span>
                 </h3>
                 <p className="text-xl text-muted-foreground text-center mt-4 mb-8">
-                    Điền gmail của bạn để nhận được hỗ trợ ngay.
+                    Điền email của bạn để nhận được hỗ trợ ngay.
                 </p>
 
                 <form
@@ -36,11 +36,11 @@ export const Support = () => {
                     </select>
                     <div className="flex flex-col w-full md:flex-row md:w-6/12 lg:w-4/12 mx-auto gap-4 md:gap-2">
                         <Input
-                            placeholder="nghiabe.dev@gmail.com"
+                            placeholder="nghiathph32178@fpt.edu.vn"
                             className="bg-muted/50 dark:bg-muted/80 "
                             aria-label="email"
                         />
-                        <Button>Nhận Hỗ Trợ</Button>
+                        <Button>Nhận hỗ trợ</Button>
                     </div>
                 </form>
             </div>
