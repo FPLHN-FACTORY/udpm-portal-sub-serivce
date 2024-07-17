@@ -84,7 +84,7 @@ export const Options = () => {
         </span>
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Thông tin chi tiết tuyển dụng thành viên tại FPLHN-FACTORY.
+        Thông tin chi tiết thành viên tại FPLHN-FACTORY.
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pricingList.map((pricing: PricingProps) => (

@@ -1,0 +1,68 @@
+#technology .slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    overflow: hidden;
+}
+
+#technology .slider .slide-track {
+    display: flex;
+    width: calc(250px * 20);
+    animation: slide 40s linear infinite;
+}
+
+#technology .slider .slide-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 14));
+    }
+}
+
+#technology .slider .slide-track .slide {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+    flex-shrink: 0;
+}
+
+#technology .slider .slide-track .slide img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 1s;
+}
+
+#technology .slider .slide-track .slide img:hover {
+    transform: translateZ(20px);
+}
+
+#technology .slider::before,
+#technology .slider::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+#technology .slider::before {
+    left: 0;
+    top: 0;
+}
+
+#technology .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}

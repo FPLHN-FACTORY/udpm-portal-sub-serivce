@@ -143,7 +143,7 @@ export const HeroCards = () => {
                 </CardHeader>
 
                 <CardContent>
-                    <a href={"#recruitment"}>
+                    <a href={"#recruiment-form"}>
                         <Button className="w-full">Ứng tuyển ngay</Button>
                     </a>
                 </CardContent>

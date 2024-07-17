@@ -31,10 +31,14 @@ const routeList: RouteProps[] = [
     },
     {
         href: "#about",
-        label: "Về chúng tôi",
+        label: "Giới thiệu xưởng",
     },
     {
-        href: "#recruitment",
+        href: "#opportunity",
+        label: "Cơ hội",
+    },
+    {
+        href: "#recruiment-form",
         label: "Tuyển dụng",
     },
     {
@@ -69,7 +73,7 @@ export const NavbarMain = () => {
                             open={isOpen}
                             onOpenChange={setIsOpen}
                         >
-                          <SheetTrigger className="px-2">
+                          <SheetTrigger className="">
                             <Menu
                                 className="flex md:hidden h-5 w-5"
                                 onClick={() => setIsOpen(true)}

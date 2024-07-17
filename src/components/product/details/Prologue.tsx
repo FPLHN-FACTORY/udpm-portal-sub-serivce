@@ -1,8 +1,8 @@
 interface Prologue {
-    title?: string; // tiêu đề
-    author?: string; // tác giả
-    introduction?: string; // mô tả bài viết
-    overview?: string; // tổng quan
+    title?: string;
+    author?: string;
+    introduction?: string;
+    overview?: string;
 }
 
 const prologue: Prologue = {
@@ -25,9 +25,7 @@ export const Prologue = () => {
             </h2>
             <p className="text-lg mb-8">{prologue.introduction}</p>
             <p className="text-gray-600">{prologue.overview}</p>
-
-
-            {/* Link to next section */}
+            
             <a
                 href="#features"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-md text-sm font-medium text-white bg-primary hover:bg-primary-dark"

@@ -92,7 +92,7 @@ export const Recruitment = () => {
                 Từ FPLHN-FACTORY
             </h2>
             <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-                Chúng tôi đang tìm kiếm tuyển dụng thành viên ở các vị trí.
+                Chúng tôi đang tìm kiếm thành viên ở các vị trí.
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
                 {pricingList.map((pricing: PricingProps) => (
