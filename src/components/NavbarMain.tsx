@@ -66,7 +66,7 @@ export const NavbarMain = () => {
                     </NavigationMenuItem>
 
                     {/* mobile */}
-                    <span className="flex md:hidden">
+                    <span className="flex lg:hidden">
                         <ModeToggle/>
 
                         <Sheet
@@ -75,7 +75,7 @@ export const NavbarMain = () => {
                         >
                           <SheetTrigger className="">
                             <Menu
-                                className="flex md:hidden h-5 w-5"
+                                className="flex lg:hidden h-5 w-5"
                                 onClick={() => setIsOpen(true)}
                             >
                               <span className="sr-only">Menu Icon</span>
@@ -88,32 +88,6 @@ export const NavbarMain = () => {
                                 FPLHN-FACTORY / Landing Page
                               </SheetTitle>
                             </SheetHeader>
-                              {/*<nav className="flex flex-col justify-center items-center gap-2 mt-4">*/}
-                              {/*  {routeList.map(({href, label}: RouteProps) => (*/}
-                              {/*      <a*/}
-                              {/*          rel="noreferrer noopener"*/}
-                              {/*          key={label}*/}
-                              {/*          href={href}*/}
-                              {/*          onClick={() => {*/}
-                              {/*              setIsOpen(false)*/}
-                              {/*          }}*/}
-                              {/*          className={buttonVariants({variant: "ghost"})}*/}
-                              {/*      >*/}
-                              {/*          {label}*/}
-                              {/*      </a>*/}
-                              {/*  ))}*/}
-                              {/*    <Link*/}
-                              {/*        to={productsRedirect}*/}
-                              {/*        rel="noreferrer noopener"*/}
-                              {/*        target="_blank"*/}
-                              {/*        className={`w-[120px] border ${buttonVariants({*/}
-                              {/*            variant: "secondary",*/}
-                              {/*        })}`}*/}
-                              {/*    >*/}
-                              {/*    <GitHubLogoIcon className="w-5 h-5 mr-2"/>*/}
-                              {/*    Sản phẩm*/}
-                              {/*  </Link>*/}
-                              {/*</nav>*/}
                               <nav className="flex flex-col justify-center items-center gap-2 mt-4">
                                   {routeList.map(({href, label}) => (
                                       <a
@@ -139,7 +113,7 @@ export const NavbarMain = () => {
                         </Sheet>
                     </span>
                     {/* desktop */}
-                    <nav className="hidden md:flex gap-2">
+                    <nav className="hidden lg:flex gap-2">
                         {routeList.map((route: RouteProps) => (
                             <a
                                 key={route.label}
@@ -154,7 +128,7 @@ export const NavbarMain = () => {
                         ))}
                     </nav>
 
-                    <div className="hidden md:flex gap-2">
+                    <div className="hidden lg:flex gap-2">
                         <Link
                             to={productsRedirect}
                             className={`w-[120px] border ${buttonVariants({variant: 'secondary'})}`}

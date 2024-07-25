@@ -8,7 +8,6 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import {Facebook, GithubIcon, Instagram, Linkedin, Youtube} from "lucide-react";
-import {useEffect, useState} from "react";
 // K17
 import GiangAvatar from '../assets/images/student/k17/GiangK17.png';
 import AnhAvatar from '../assets/images/student/k17/NgocAnhK17.png';
@@ -25,6 +24,14 @@ import LuatAvatar from '../assets/images/student/k18/LuatK18V2.png';
 import PhuongAvatar from '../assets/images/student/k18/PhuongK18V2.png';
 // import ThuAvatar from '../assets/images/student/k18/ThuK18V2.png';
 // import ThangAvatar from '../assets/images/student/k18/';
+
+import {Swiper, SwiperSlide} from "swiper/react";
+// { CSS }
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import '@/assets/css/veteran-member.css'
+import {Autoplay, Keyboard, Mousewheel, Navigation, Pagination} from "swiper/modules";
 
 
 interface Course {
@@ -272,34 +279,20 @@ const teamK17K18: TeamProps[] = [
 
 const teamVeteranMembers: Course[] = [
     {
-        courseName: "Kỳ Cựu",
+        courseName: "K17.3",
         team: teamK17,
     },
     {
-        courseName: "Kỳ Cựu",
+        courseName: "K18.3",
         team: teamK18,
     },
     {
-        courseName: "Kỳ Cựu",
+        courseName: "K17-18.3",
         team: teamK17K18,
     }
 ]
 
 export const VeteranMember = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [fade, setFade] = useState(true);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setFade(false);
-            setTimeout(() => {
-                setCurrentIndex((prevIndex) => (prevIndex + 1) % teamVeteranMembers.length);
-                setFade(true);
-            }, 1000);
-        }, 10000);
-
-        return () => clearInterval(interval);
-    }, []);
 
     const socialIcon = (iconName: string) => {
         switch (iconName) {
@@ -323,74 +316,89 @@ export const VeteranMember = () => {
             id="veteran-member"
             className="container py-24 sm:py-32 relative overflow-hidden w-full"
         >
-            {
-                teamVeteranMembers.slice(currentIndex, currentIndex + 1).map((member: Course) => (
-                    <div
-                        key={member.courseName}
-                    >
-                        <h2 className="text-3xl md:text-4xl font-bold">
+            <Swiper
+                className={'cursor-pointer'}
+                slidesPerView={1}
+                navigation={true}
+                pagination={{
+                    dynamicBullets: true,
+                }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                grabCursor={true}
+                mousewheel={true}
+                keyboard={true}
+                spaceBetween={30}
+                modules={[Pagination, Navigation, Mousewheel, Keyboard, Autoplay]}
+            >
+                {
+                    teamVeteranMembers.map((member: Course) => (
+                        <SwiperSlide>
+                            <h2 className="text-3xl md:text-4xl font-bold">
                                 <span
                                     className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
                                   Đội Ngũ {member.courseName} {" "}
                                 </span>
-                            FPLHN-FACTORY
-                        </h2>
+                                FPLHN-FACTORY
+                            </h2>
 
-                        <p className="mt-4 mb-10 text-xl text-muted-foreground">
-                            Là những thành viên kỳ cựu nhất FPLHN-FACTORY!
-                        </p>
+                            <p className="mt-4 mb-10 text-xl text-muted-foreground">
+                                Là những thành viên kỳ cựu nhất FPLHN-FACTORY!
+                            </p>
 
-                        <div
-                            className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10 
-                             transition-opacity duration-1000 ${fade ? 'opacity-100' : 'opacity-0'}`}
-                        >
-                            {member.team.map(({
-                                                  imageUrl,
-                                                  name,
-                                                  position,
-                                                  courseName,
-                                                  socialNetworks
-                                              }: TeamProps) => (
-                                <Card key={name}
-                                      className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center">
-                                    <CardHeader className="mt-8 flex justify-center items-center pb-2">
-                                        <img
-                                            src={imageUrl}
-                                            alt={`${name} ${position}`}
-                                            className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
-                                        />
-                                        <CardTitle className="text-center">{name}</CardTitle>
-                                        <CardDescription className="text-primary">{position}</CardDescription>
-                                    </CardHeader>
+                            <div
+                                className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10`}
+                            >
+                                {member.team.map(({
+                                                      imageUrl,
+                                                      name,
+                                                      position,
+                                                      courseName,
+                                                      socialNetworks
+                                                  }: TeamProps) => (
+                                    <Card key={name}
+                                          className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center">
+                                        <CardHeader className="mt-8 flex justify-center items-center pb-2">
+                                            <img
+                                                src={imageUrl}
+                                                alt={`${name} ${position}`}
+                                                className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
+                                            />
+                                            <CardTitle className="text-center">{name}</CardTitle>
+                                            <CardDescription className="text-primary">{position}</CardDescription>
+                                        </CardHeader>
 
-                                    <CardContent className="text-center pb-2">
-                                        <p>{courseName}</p>
-                                    </CardContent>
+                                        <CardContent className="text-center pb-2">
+                                            <p>{courseName}</p>
+                                        </CardContent>
 
-                                    <CardFooter>
-                                        {socialNetworks.map(({name, url}: SociaNetworkslProps) => (
-                                            <div key={name}>
-                                                <a
-                                                    rel="noreferrer noopener"
-                                                    href={url}
-                                                    target="_blank"
-                                                    className={buttonVariants({
-                                                        variant: "ghost",
-                                                        size: "sm",
-                                                    })}
-                                                >
-                                                    <span className="sr-only">{name} icon</span>
-                                                    {socialIcon(name)}
-                                                </a>
-                                            </div>
-                                        ))}
-                                    </CardFooter>
-                                </Card>
-                            ))}
-                        </div>
-                    </div>
-                ))
-            }
+                                        <CardFooter>
+                                            {socialNetworks.map(({name, url}: SociaNetworkslProps) => (
+                                                <div key={name}>
+                                                    <a
+                                                        rel="noreferrer noopener"
+                                                        href={url}
+                                                        target="_blank"
+                                                        className={buttonVariants({
+                                                            variant: "ghost",
+                                                            size: "sm",
+                                                        })}
+                                                    >
+                                                        <span className="sr-only">{name} icon</span>
+                                                        {socialIcon(name)}
+                                                    </a>
+                                                </div>
+                                            ))}
+                                        </CardFooter>
+                                    </Card>
+                                ))}
+                            </div>
+                        </SwiperSlide>
+                    ))
+                }
+            </Swiper>
         </section>
     );
 };

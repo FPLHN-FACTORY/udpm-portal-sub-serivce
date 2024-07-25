@@ -1,0 +1,10 @@
+#workshop-slider {
+    display: none !important;
+}
+
+@media screen and (min-width: 1024px) {
+    #workshop-slider {
+        display: flex !important;
+    }
+}
+

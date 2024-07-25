@@ -19,34 +19,34 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
     {
-        title: "Step 1: Bài kiểm tra cấp độ 1",
+        title: "Bước 1: Bài kiểm tra cấp độ 1",
         description:
             "Kiểm tra cơ bản vận dụng xoay quanh các tính chất của lập trình hướng đối tượng.",
     },
     {
-        title: "Step 2: Bài kiểm tra cấp độ 2",
+        title: "Bước 2: Bài kiểm tra cấp độ 2",
         description:
             "Kiểm tra nâng cao đòi hỏi khả năng thao tác dữ liệu với cơ sở dữ liệu.",
     },
     {
-        title: "Step 3: Bài kiểm tra cấp độ 3",
+        title: "Bước 3: Bài kiểm tra cấp độ 3",
         description:
             "Kiểm tra nâng cao thao tác dữ liệu với giao diện người dùng.",
     },
     {
-        title: "Step 4: Phỏng vấn",
+        title: "Bước 4: Phỏng vấn",
         description:
             "Trả lời phỏng vấn từ các thành viên kỳ cựu của xưởng.",
     },
     {
-        title: "Step 5: Làm việc nhóm",
+        title: "Bước 5: Git & mô hình Agile",
         description:
             "Hướng dẫn cách sử dụng git, cách làm việc nhóm theo mô hình phát triển phần mềm: Agile.",
     },
     {
-        title: "Step 6: Trở thành thành viên",
+        title: "Bước 6: Đào tạo dự án",
         description:
-            "Thực hành làm việc nhóm tại phòng làm việc của xưởng.",
+            "Đào tạo thực hành dự án được giao tại xưởng.",
     },
 ];
 

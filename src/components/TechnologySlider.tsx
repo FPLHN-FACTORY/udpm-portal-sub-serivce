@@ -1,18 +1,18 @@
 import {useEffect, useRef, useState} from "react";
-import JavaLogo from "@/assets/images/logo/technology/Java/javalogo.jpg";
-import Auth0Logo from "@/assets/images/logo/technology/Auth0/auth0logo.jpg";
-import AWSLogo from "@/assets/images/logo/technology/AWS/aws.jpg";
-import DockerLogo from "@/assets/images/logo/technology/Docker/dockerlogo.jpg";
-import GithubActionLogo from "@/assets/images/logo/technology/GithubAction/githubactionlogo.jpg";
-import GoogleCloudPlatformLogo from "@/assets/images/logo/technology/GoogleCloudPlatform/googlecloudplatformlogo.jpg";
-import JenkinsLogo from "@/assets/images/logo/technology/Jenkins/jenkinslogo.jpg";
-import Junit5Logo from "@/assets/images/logo/technology/Junit5/junit5logo.jpg";
-import KotlinLogo from "@/assets/images/logo/technology/Kotlin/kitlinlogo.jpg";
-import MicrosoftAzure from "@/assets/images/logo/technology/MicrosoftAzure/microsoftazurelogo.jpg";
-import NodeJs from "@/assets/images/logo/technology/NodeJs/nodejslogo.jpg";
-import ReactLogo from "@/assets/images/logo/technology/React/reactlogo.jpg";
-import SeleniumLogo from "@/assets/images/logo/technology/Selenium/seleniumlogo.jpg";
-import SpringLogo from "@/assets/images/logo/technology/Spring/springlogo.jpg";
+import JavaLogo from "@/assets/images/logo/technology/FullOptions/Java.png";
+import Auth0Logo from "@/assets/images/logo/technology/FullOptions/Auth0.png";
+import AWSLogo from "@/assets/images/logo/technology/FullOptions/AWS.png";
+import DockerLogo from "@/assets/images/logo/technology/FullOptions/Docker.png";
+import GithubActionLogo from "@/assets/images/logo/technology/FullOptions/GithubAction.png";
+import GoogleCloudPlatformLogo from "@/assets/images/logo/technology/FullOptions/GoogleCloudPlatform.png";
+import JenkinsLogo from "@/assets/images/logo/technology/FullOptions/Jenkins.png";
+import Junit5Logo from "@/assets/images/logo/technology/FullOptions/Junit.png";
+import KotlinLogo from "@/assets/images/logo/technology/FullOptions/Kotlin.png";
+import MicrosoftAzure from "@/assets/images/logo/technology/FullOptions/MicrosoftAzure.png";
+import NodeJs from "@/assets/images/logo/technology/FullOptions/Node.png";
+import ReactLogo from "@/assets/images/logo/technology/FullOptions/React.png";
+import SeleniumLogo from "@/assets/images/logo/technology/FullOptions/Selenium.png";
+import SpringLogo from "@/assets/images/logo/technology/FullOptions/Spring.png";
 import '@/assets/css/technology.css';
 
 const technologies = [

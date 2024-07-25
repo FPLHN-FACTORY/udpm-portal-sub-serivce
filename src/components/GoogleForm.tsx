@@ -19,14 +19,15 @@ interface dataStudent {
 
 const RegexStudentId = /^PH\d{5}$/;
 const RegexStudentName = /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơẠ-ỹ\s]{5,}$/;
-const RegexStudentEmail = /^(?=.*\d{5})(?:[a-zA-Z0-9._%+-]+)@(gmail\.com|fpt\.edu\.vn)$/;
+const RegexStudentEmail = /^[a-zA-Z0-9._%+-]+@(gmail\.com|fpt\.edu\.vn)$/;
+
 
 const schema = yup.object().shape({
     studentId: yup
         .string()
         .trim()
         .required('Mã sinh viên là bắt buộc')
-        .matches(RegexStudentId, 'Mã sinh viên không hợp lệ'),
+        .matches(RegexStudentId, 'Mã sinh viên không hợp lệ (ví dụ hợp lệ: PH32178)'),
     studentName: yup
         .string()
         .trim()
@@ -36,7 +37,7 @@ const schema = yup.object().shape({
         .trim()
         .required('Email sinh viên là bắt buộc')
         .email('Định dạng email không hợp lệ')
-        .matches(RegexStudentEmail, 'Email sinh viên phải có mã hợp lệ và đuôi là gmail.com hoặc fpt.edu.vn'),
+        .matches(RegexStudentEmail, 'Email sinh viên phải có đuôi là gmail.com hoặc fpt.edu.vn'),
     studentSemester: yup.string().required('Học kỳ hiện tại của sinh viên là bắt buộc'),
     studentNominee: yup.string().required('Vị trí ứng tuyển là bắt buộc'),
     studentOptions: yup.string().required('Lựa chọn đầu vào là bắt buộc'),
@@ -64,8 +65,6 @@ export const GoogleForm = () => {
     }
 
     const sendMailTemplate = (template: string) => {
-        console.log(template);
-        console.log(env.VITE_TEMPLATE_ID_FPL);
         if (formRef.current) {
             emails.sendForm(
                 env.VITE_SERVICE_ID,
@@ -136,7 +135,7 @@ export const GoogleForm = () => {
                         defaultValue=""
                         render={({field}) => (
                             <div className="min-w-72 w-1/2 mx-auto">
-                                <Input {...field} placeholder="PH32178" className="bg-muted/50 dark:bg-muted/80"/>
+                                <Input {...field} placeholder="PH32178" className="bg-muted/50 dark:bg-muted/80 mb-1"/>
                                 {errors.studentId && <p className="text-red-500 text-sm">{errors.studentId.message}</p>}
                             </div>
                         )}
@@ -148,7 +147,7 @@ export const GoogleForm = () => {
                         render={({field}) => (
                             <div className="min-w-72 w-1/2 mx-auto">
                                 <Input {...field} placeholder="Trịnh Hiếu Nghĩa"
-                                       className="bg-muted/50 dark:bg-muted/80"/>
+                                       className="bg-muted/50 dark:bg-muted/80 mb-1"/>
                                 {errors.studentName &&
                                     <p className="text-red-500 text-sm">{errors.studentName.message}</p>}
                             </div>
@@ -160,8 +159,8 @@ export const GoogleForm = () => {
                         defaultValue=""
                         render={({field}) => (
                             <div className="min-w-72 w-1/2 mx-auto">
-                                <Input {...field} placeholder="nghiathph32178@gmail.com"
-                                       className="bg-muted/50 dark:bg-muted/80"/>
+                                <Input {...field} placeholder="nghiabe.dev@gmail.com"
+                                       className="bg-muted/50 dark:bg-muted/80 mb-1"/>
                                 {errors.studentEmail &&
                                     <p className="text-red-500 text-sm">{errors.studentEmail.message}</p>}
                             </div>

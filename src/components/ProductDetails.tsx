@@ -458,8 +458,8 @@ export const ProductDetails = () => {
     const productDetails = getProductDetails(result);
     return (
         <section
-            id="product-details"
-            className="container py-6 sm:py-12"
+            id="products"
+            className="container py-24 sm:py-24"
         >
             {productDetails && (
                 <>

@@ -1,11 +1,11 @@
 import {Button} from "./ui/button";
 import {buttonVariants} from "./ui/button";
 import {GitHubLogoIcon} from "@radix-ui/react-icons";
-import {WorkshopCard} from "@/components/WorkshopCard.tsx";
+import {WorkshopSlider} from "@/components/WorkshopSlider.tsx";
 
 export const Hero = () => {
     return (
-        <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10" id={"main"}>
+        <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-64 gap-10" id={"main"}>
             <div className="text-center lg:text-start space-y-6">
                 <main className="text-5xl md:text-6xl font-bold">
                     <h1 className="inline">
@@ -51,8 +51,13 @@ export const Hero = () => {
             {/*</div>      */}
 
             {/* Hero cards sections */}
+            {/*<div className="z-10 overflow-hidden">*/}
+            {/*    <WorkshopCard/>*/}
+            {/*</div>*/}
+
+            {/*Hero cards sections*/}
             <div className="z-10 overflow-hidden">
-                <WorkshopCard/>
+                <WorkshopSlider/>
             </div>
 
             {/* Shadow effect */}

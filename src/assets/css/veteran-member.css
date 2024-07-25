@@ -1,0 +1,43 @@
+#veteran-member .swiper {
+    padding-bottom: 80px;
+}
+
+#veteran-member .swiper-button-prev,
+#veteran-member .swiper-button-next {
+    top: 95%
+}
+
+#veteran-member .swiper-button-prev:after,
+#veteran-member .swiper-button-next:after {
+    font-size: 13px !important;
+    font-weight: bold;
+    margin: 0 !important;
+    background-color: #16A34A;
+    padding: 16px 16px;
+    border-radius: 20%;
+    color: white;
+}
+
+#veteran-member .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #16A34A;
+}
+
+@media screen and (min-width: 640px) {
+    #veteran-member .swiper-container {
+        width: 640px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #veteran-member .swiper-container {
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #veteran-member .swiper-container {
+        width: 1440px;
+    }
+}

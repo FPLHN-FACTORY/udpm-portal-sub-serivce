@@ -32,6 +32,14 @@ const routeList: RouteProps[] = [
         label: "Trang chủ",
     },
     {
+        href: "#products",
+        label: "Sản phẩm",
+    },
+    {
+        href: "#products-new",
+        label: "Phát triển",
+    },
+    {
         href: "#recruiment-form",
         label: "Ứng tuyển",
     },
@@ -98,17 +106,14 @@ export const Navbar = () => {
                           {label}
                       </a>
                   ))}
-                    <a
+                    <button
                         rel="noreferrer noopener"
-                        href="https://github.com/FPLHN-FACTORY"
-                        target="_blank"
-                        className={`w-[110px] border ${buttonVariants({
-                            variant: "secondary",
-                        })}`}
+                        className={`border ${buttonVariants({variant: "secondary"})}`}
+                        onClick={() => navigation("/products")}
                     >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5"/>
-                    Github
-                  </a>
+                            <GitHubLogoIcon className="mr-2 w-5 h-5"/>
+                            Sản phẩm
+                    </button>
                 </nav>
               </SheetContent>
             </Sheet>

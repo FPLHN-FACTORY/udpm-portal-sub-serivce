@@ -1,0 +1,50 @@
+#achievement .swiper {
+    padding-bottom: 70px;
+}
+
+#achievement .swiper-slide {
+    display: flex;
+    justify-content: center;
+    height: 55vh;
+}
+
+#achievement .swiper-button-prev,
+#achievement .swiper-button-next {
+    top: 95%
+}
+
+#achievement .swiper-button-prev:after,
+#achievement .swiper-button-next:after {
+    font-size: 13px !important;
+    font-weight: bold;
+    margin: 0 !important;
+    background-color: #16A34A;
+    padding: 16px 16px;
+    border-radius: 20%;
+    color: white;
+}
+
+#achievement .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #16A34A;
+}
+
+@media screen and (min-width: 640px) {
+    #achievement .swiper-container {
+        width: 640px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    #achievement .swiper-container {
+        width: 700px;
+    }
+}
+
+@media screen and (min-width: 1352px) {
+    #achievement .swiper-container {
+        width: 1352px;
+    }
+}
