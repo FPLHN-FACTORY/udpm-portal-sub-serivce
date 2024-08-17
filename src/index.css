@@ -63,3 +63,144 @@ html {
     }
   }
 }
+
+@keyframes colorCycle {
+  0% {
+    background-color: #ff0000; /* Bright red */
+  }
+  20% {
+    background-color: #ff0000; /* Bright red */
+  }
+  40% {
+    background-color: #ffff00; /* Bright yellow */
+  }
+  60% {
+    background-color: #00ff00; /* Bright green */
+  }
+  80% {
+    background-color: #ff0000; /* Bright red */
+  }
+  100% {
+    background-color: #ff0000; /* Bright red */
+  }
+}
+
+.animate-gradient {
+  animation: colorCycle 5s linear infinite;
+}
+
+
+/* .swiper-button-prev,.swiper-button-next{
+  width: 50px;
+  height: 50px;
+  background-color: #f0f0f0;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 10px;
+  color: white;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+}
+.swiper-button-prev:hover,.swiper-button-next:hover{
+  background-color: #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+} */
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 13px !important;
+    font-weight: bold;
+    margin: 0 !important;
+    background-color: #EEEEEE;
+    padding: 16px 16px;
+    border-radius: 20%;
+    color: white;
+}
+
+@keyframes galaxyAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.galaxy-text {
+  background: linear-gradient(
+    300deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #8a2be2,
+    #ff69b4
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: galaxyAnimation 2s ease infinite;
+}
+
+.bg-image {
+  background-image: url('/src/assets/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+/* Tùy chọn: để ảnh cố định khi cuộn */
+}
+.navbar {
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+.nav-link {
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.nav-link span {
+  position: relative;
+  padding-bottom: 2px;
+  Font-weight: 600;
+}
+
+.nav-link span::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  top: calc(100% + 5px);
+  bottom: 0;
+  left: 0;
+  background-color: #FF9900;
+  transition: width 0.3s ease;
+}
+.nav-link span {
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover span {
+  color:#FF9900;
+}
+.nav-link:hover span::after {
+  width: 100%;
+  color:#FF9900;
+}
+
+.nav-link span.active {
+  font-weight: bold;
+  color:#FF9900;
+}
+
+.nav-link span.active::after {
+  width: 100%;
+}

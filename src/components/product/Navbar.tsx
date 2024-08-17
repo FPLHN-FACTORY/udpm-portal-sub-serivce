@@ -33,11 +33,11 @@ const routeList: RouteProps[] = [
     },
     {
         href: "#products",
-        label: "Sản phẩm",
+        label: "Giới thiệu về xưởng",
     },
     {
         href: "#products-new",
-        label: "Phát triển",
+        label: "Sản phẩm",
     },
     {
         href: "#recruiment-form",
@@ -45,7 +45,7 @@ const routeList: RouteProps[] = [
     },
     {
         href: "#faq",
-        label: "FAQ",
+        label: "blog",
     },
 ];
 
@@ -58,6 +58,7 @@ export const Navbar = () => {
         <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
             <NavigationMenu className="mx-auto">
                 <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
+                    
                     <NavigationMenuItem className="font-bold flex">
                         <Link
                             to={"/"}

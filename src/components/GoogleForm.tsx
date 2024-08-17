@@ -58,6 +58,7 @@ export const GoogleForm = () => {
             body: formData,
         });
         if (responseExcel.ok) {
+            console.log(responseExcel)
             toast.success("Gửi form ứng tuyển thành công, Vui lòng check thông tin của bạn tại mail!");
         } else {
             toast.error("Gửi form ứng tuyển thất bại!");
@@ -100,6 +101,7 @@ export const GoogleForm = () => {
         formData.append("StudentNominee", data.studentNominee);
         formData.append("StudentOptions", data.studentOptions);
         try {
+            console.log(formData)
             sendExcel(formData).then(() => {
                 sendMailTemplate(env.VITE_TEMPLATE_ID_STUDENT);
                 sendMailTemplate(env.VITE_TEMPLATE_ID_FPL);
@@ -115,12 +117,12 @@ export const GoogleForm = () => {
     return (
         <section id="recruiment-form">
             <ToastContainer/>
-            <hr className="w-11/12 mx-auto"/>
+            {/* <hr className="w-11/12 mx-auto"/> */}
 
             <div className="container py-24 sm:py-32">
                 <h3 className="text-center text-4xl md:text-5xl font-bold">
                     Ứng Tuyển{" "}
-                    <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+                    <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text text-orange-500">
                         FPLHN-FACTORY
                     </span>
                 </h3>
@@ -135,7 +137,8 @@ export const GoogleForm = () => {
                         defaultValue=""
                         render={({field}) => (
                             <div className="min-w-72 w-1/2 mx-auto">
-                                <Input {...field} placeholder="PH32178" className="bg-muted/50 dark:bg-muted/80 mb-1"/>
+                                    <span className='text-[17px] font-semibold '>Mã số sinh viên<span className='text-red-600'>*</span></span>
+                                <Input {...field} placeholder="Nhập mã sinh viên" className="bg-muted/50 dark:bg-muted/80 mb-1 mt-3"/>
                                 {errors.studentId && <p className="text-red-500 text-sm">{errors.studentId.message}</p>}
                             </div>
                         )}
@@ -146,8 +149,9 @@ export const GoogleForm = () => {
                         defaultValue=""
                         render={({field}) => (
                             <div className="min-w-72 w-1/2 mx-auto">
-                                <Input {...field} placeholder="Trịnh Hiếu Nghĩa"
-                                       className="bg-muted/50 dark:bg-muted/80 mb-1"/>
+                                 <span className='text-[17px] font-semibold '>Họ và tên<span className='text-red-600'>*</span></span>
+                                <Input {...field} placeholder="Nhập họ và tên"
+                                       className="bg-muted/50 dark:bg-muted/80 mb-1 mt-3"/>
                                 {errors.studentName &&
                                     <p className="text-red-500 text-sm">{errors.studentName.message}</p>}
                             </div>
@@ -159,8 +163,9 @@ export const GoogleForm = () => {
                         defaultValue=""
                         render={({field}) => (
                             <div className="min-w-72 w-1/2 mx-auto">
-                                <Input {...field} placeholder="nghiabe.dev@gmail.com"
-                                       className="bg-muted/50 dark:bg-muted/80 mb-1"/>
+                                <span className='text-[17px] font-semibold '>Email<span className='text-red-600'>*</span></span>
+                                <Input {...field} placeholder="Nhập email"
+                                       className="bg-muted/50 dark:bg-muted/80 mb-1 mt-3"/>
                                 {errors.studentEmail &&
                                     <p className="text-red-500 text-sm">{errors.studentEmail.message}</p>}
                             </div>
@@ -172,8 +177,9 @@ export const GoogleForm = () => {
                         defaultValue="Kỳ 1"
                         render={({field}) => (
                             <div className="min-w-72 w-1/2 mx-auto">
+                                <span className='text-[17px] font-semibold '>Học kì hiện tại<span className='text-red-600'>*</span></span>
                                 <select {...field}
-                                        className="block w-full rounded-md border border-input px-2 py-2 text-sm bg-muted/50 dark:bg-muted/80">
+                                        className="block w-full rounded-md border border-input px-2 py-2 text-sm bg-muted/50 dark:bg-muted/80 mt-3">
                                     <option value="Kỳ 1">Kỳ 1</option>
                                     <option value="Kỳ 2">Kỳ 2</option>
                                     <option value="Kỳ 3">Kỳ 3</option>
@@ -192,8 +198,9 @@ export const GoogleForm = () => {
                         defaultValue="Developer"
                         render={({field}) => (
                             <div className="min-w-72 w-1/2 mx-auto">
+                                <span className='text-[17px] font-semibold '>Vị trí muốn ứng tuyển<span className='text-red-600'>*</span></span>
                                 <select {...field}
-                                        className="block w-full rounded-md border border-input px-2 py-2 text-sm bg-muted/50 dark:bg-muted/80">
+                                        className="block w-full rounded-md border border-input px-2 py-2 text-sm bg-muted/50 dark:bg-muted/80 mt-3">
                                     <option value="Developer">Developer</option>
                                     <option value="Tester">Tester</option>
                                 </select>
@@ -208,8 +215,9 @@ export const GoogleForm = () => {
                         defaultValue="Đào Tạo Theo Lộ Trình Dựa Vào Kỳ Học Và Nguyện Vọng."
                         render={({field}) => (
                             <div className="min-w-72 w-1/2 mx-auto">
+                                <span className='text-[17px] font-semibold '>Chọn lộ trình đào tạo<span className='text-red-600'>*</span></span>
                                 <select {...field}
-                                        className="block w-full rounded-md border border-input px-2 py-2 text-sm bg-muted/50 dark:bg-muted/80">
+                                        className="block w-full rounded-md border border-input px-2 py-2 text-sm bg-muted/50 dark:bg-muted/80 mt-3 mb-3">
                                     <option value="Đào Tạo Theo Lộ Trình Dựa Vào Kỳ Học Và Nguyện Vọng.">Đào Tạo Theo Lộ
                                         Trình Dựa Vào Kỳ Học Và Nguyện Vọng.
                                     </option>
@@ -222,13 +230,13 @@ export const GoogleForm = () => {
                             </div>
                         )}
                     />
-                    <Button className="mx-auto" type="submit" disabled={isSubmitting}>
+                    <Button className="mx-auto text-white bg-orange-500 hover:bg-orange-600" type="submit" disabled={isSubmitting}>
                         {isSubmitting ? 'Đang gửi...' : 'Gửi ứng tuyển'}
                     </Button>
                 </form>
             </div>
 
-            <hr className="w-11/12 mx-auto"/>
+            {/* <hr className="w-11/12 mx-auto"/> */}
         </section>
     );
 };

@@ -13,14 +13,14 @@ import {Check} from "lucide-react";
 import {LightBulbIcon} from "./Icons";
 import {GitHubLogoIcon} from "@radix-ui/react-icons";
 import tiennh21Avatar from '../assets/images/teacher/tiennh21/svg/tiennh21-1hand.svg';
-import bitLogoText from "@/assets/images/logo/bit/transparent/svg/logo-fpl/logo-no-text.svg";
+ 
 
 export const HeroCards = () => {
     return (
-        <div className="hidden lg:flex flex-row flex-wrap gap-8 relative w-[700px] h-[500px]">
+        <div className="hidden lg:flex flex-row flex-wrap gap-8 relative w-[700px] h-[500px] ">
             {/* Testimonial */}
             <Card className="absolute w-[340px] -top-[15px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
-                <CardHeader className="flex flex-row items-center gap-4 pb-2">
+                <CardHeader className="flex flex-row items-center gap-4 pb-2 ">
                     <Avatar>
                         <AvatarImage
                             alt=""

@@ -18,16 +18,16 @@
     font-size: 13px !important;
     font-weight: bold;
     margin: 0 !important;
-    background-color: #16A34A;
+    background-color: #EEEEEE;
     padding: 16px 16px;
-    border-radius: 20%;
+    border-radius: 30%;
     color: white;
 }
 
 #achievement .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
-    background-color: #16A34A;
+    background-color: #EEEEEE;
 }
 
 @media screen and (min-width: 640px) {

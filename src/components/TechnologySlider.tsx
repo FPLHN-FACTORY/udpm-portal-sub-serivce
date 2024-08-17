@@ -58,7 +58,7 @@ export const TechnologySlider = () => {
         <section id="technology" className="container py-24 sm:py-32">
             <h2 className="text-3xl md:text-4xl font-bold mb-12">
                 Luôn Cập Nhật
-                <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+                <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text text-orange-500">
                     {" "}
                     Công Nghệ
                     {" "}
@@ -66,9 +66,9 @@ export const TechnologySlider = () => {
                 Mới Nhất, Nâng Cao Hiệu Quả Phát Triển Framework Riêng Của FPLHN-FACTORY
             </h2>
             <div className="slider">
-                <div className={`slide-track transition-opacity duration-1000 ${fade ? 'opacity-100' : 'opacity-0'}`}>
+                <div className={`slide-track transition-opacity duration-1000 ${fade ? 'opacity-100' : 'opacity-0'} h-[100px]`}>
                     {technologies.map((tech, index) => (
-                        <div className="slide" key={index}>
+                        <div className="slide " key={index} >
                             <img
                                 src={tech}
                                 alt={`Technology ${index}`}
