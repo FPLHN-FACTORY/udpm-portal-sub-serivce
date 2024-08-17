@@ -16,23 +16,23 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "/udpm-portal-sub-serivce/",
+    href: "",
     label: "Trang chủ",
   },
   {
-    href: "/udpm-portal-sub-serivce/aboutthefactory",
+    href: "aboutthefactory",
     label: "Giới thiệu",
   },
   {
-    href: "/udpm-portal-sub-serivce/products",
+    href: "products",
     label: "Sản phẩm",
   },
   {
-    href: "/udpm-portal-sub-serivce/recruitment",
+    href: "recruitment",
     label: "Tuyển dụng",
   },
   {
-    href: "/udpm-portal-sub-serivce/blog",
+    href: "blog",
     label: "Blog",
   },
 ];
@@ -78,19 +78,19 @@ export const NavbarMain = () => {
 
               return (
                 <Link
-                  key={route.label}
-                  to={route.href}
-                  className={`nav-link text-[17px] bg-white  `}
-                  onClick={(e) => handleClick(e, route.href)}
+                key={route.label}
+                to={route.href}
+                className={`nav-link text-[17px] bg-white ${isActive ? 'active-link' : ''}`}
+                onClick={(e) => handleClick(e, route.href)}
+              >
+                <span
+                  className={`text-[18px] text-black relative ${
+                    isActive ? 'text-blue-500 font-bold' : ''
+                  }`} // Thay đổi màu và kiểu chữ cho liên kết đang được chọn
                 >
-                  <span
-                    className={`text-[18px] text-black relative ${
-                      isActive ? "active " : ""
-                    }`} // Add 'active' class
-                  >
-                    {route.label}
-                  </span>
-                </Link>
+                  {route.label}
+                </span>
+              </Link>
               );
             })}
           </nav>

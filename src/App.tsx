@@ -22,11 +22,11 @@ function App() {
                     <Route path="/" element={<MainRouter/>}/>
                     <Route path="products" element={<ProductsRouter/>}/>
                     {/* <Route path="products/module" element={<ProductDetailsRouter/>}/> */}
-                    <Route path="aboutthefactory" element={<AboutTheFactoryRouter/>}></Route>
-                    <Route path="recruitment" element={<RecruitmentRouter/>}></Route>
-                    <Route path="blog" element={<BlogRouter/>}></Route>
-                    <Route path="tieu-chi-tham-gia-xuong" element={<Blog1Router/>}></Route>
-                    <Route path="lam-viec-voi-git" element={<Blog2Router/>}></Route>
+                    <Route path="aboutthefactory" element={<AboutTheFactoryRouter/>}/>
+                    <Route path="recruitment" element={<RecruitmentRouter/>}/>
+                    <Route path="blog" element={<BlogRouter/>}/>
+                    <Route path="tieu-chi-tham-gia-xuong" element={<Blog1Router/>}/>
+                    <Route path="lam-viec-voi-git" element={<Blog2Router/>}/>
 
                 </Routes>
                 <ScrollToTop/>
