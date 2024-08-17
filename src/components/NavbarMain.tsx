@@ -1,13 +1,9 @@
-
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
 
 import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "./Icons";
@@ -24,32 +20,31 @@ const routeList: RouteProps[] = [
     label: "Trang chủ",
   },
   {
-    href: "aboutthefactory",
+    href: "/aboutthefactory",
     label: "Giới thiệu ",
   },
   {
-    href: "products",
+    href: "/products",
     label: "Sản phẩm",
   },
   {
-    href: "recruitment",
+    href: "/recruitment",
     label: "Tuyển dụng",
   },
   {
-    href: "blog",
+    href: "/blog",
     label: "Blog",
   },
 ];
 
 export const NavbarMain = () => {
-
   const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) => {
     e.preventDefault();
     window.location.href = href;
-    // console.log(window.location.href)
+    console.log(href)
   };
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background h-[100px] flex items-center justify-center ">
@@ -70,69 +65,9 @@ export const NavbarMain = () => {
           <span className="flex lg:hidden">
             <ModeToggle />
 
-            <Sheet
-            // open={isOpen}
-            // onOpenChange={setIsOpen}
-            >
-              {/* <SheetTrigger className="">
-                            <Menu
-                                className="flex lg:hidden h-5 w-5"
-                                onClick={() => setIsOpen(true)}
-                            >
-                              <span className="sr-only">Menu Icon</span>
-                            </Menu>
-                          </SheetTrigger> */}
-
+            <Sheet>
               <SheetContent side={"left"}>
-                {/* <SheetHeader>
-                              <SheetTitle className="font-bold text-center text-xl">
-                                FPLHN-FACTORY / Landing Page
-                              </SheetTitle>
-                            </SheetHeader> */}
-                {/* <nav className="flex flex-col justify-center items-center gap-2 mt-4">
-                                  {routeList.map(({href, label}) => (
-                                      <a
-                                          key={label}
-                                          href={href}
-                                          onClick={() => {
-                                              setIsOpen(false);
-                                          }}
-                                          className={buttonVariants({variant: 'ghost'})}
-                                      >
-                                          {label}
-                                      </a>
-                                  ))}
-                                  <Link
-                                      to={productsRedirect}
-                                      className={`w-[120px] border ${buttonVariants({variant: 'secondary'})}`}
-                                  >
-                                    <GitHubLogoIcon className="w-5 h-5 mr-2"/>
-                                    Sản phẩm
-                                  </Link>
-                                </nav> */}
-                <nav className="flex flex-col justify-center items-center gap-2 mt-4">
-                  {/* {routeList.map(({ href, label }: RouteProps) => (
-    <Link
-      key={label}
-      to={href}
-     
-      className={buttonVariants({ variant: "ghost" })}
-    >
-      {label}
-    </Link>
-  ))} */}
-                  {/* <button
-                                        rel="noreferrer noopener"
-                                        className={`border ${buttonVariants({ variant: "secondary" })}`}
-                                        onClick={() => {
-                                        setIsOpen(false);
-                                        navigation("/products"); // Điều hướng đến đường dẫn "/products"
-                                        }}
-                                    >
-                                        <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                                        Sản phẩm
-                                    </button> */}
-                </nav>
+                <nav className="flex flex-col justify-center items-center gap-2 mt-4"></nav>
               </SheetContent>
             </Sheet>
           </span>
@@ -161,13 +96,6 @@ export const NavbarMain = () => {
           </nav>
 
           <div className="hidden lg:flex gap-2">
-            {/* <Link
-                            to={productsRedirect}
-                            className={`w-[120px] border ${buttonVariants({variant: 'secondary'})}`}
-                        >
-                            <GitHubLogoIcon className="w-5 h-5 mr-2"/>
-                            Sản phẩm
-                        </Link> */}
             <ModeToggle />
           </div>
         </NavigationMenuList>
