@@ -120,7 +120,7 @@ export const Contact = () => {
    <ToastContainer/>
 <h3 className="text-center text-4xl md:text-5xl font-bold">
                     Liên hệ{" "}
-                    <span className="bg-gradient-to-b  text-transparent bg-clip-text text-orange-600">
+                    <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text text-orange-600">
                         FPLHN-FACTORY
                     </span>
                 </h3>
@@ -180,7 +180,7 @@ export const Contact = () => {
                     </div>
                 )}
             />
-            <Button className="mx-auto bg-orange-500 hover:bg-orange-600 px-7 py-5" type="submit" disabled={isSubmitting}>
+            <Button className="mx-auto bg-orange-500 hover:bg-orange-600 px-7" type="submit" disabled={isSubmitting}>
                 {isSubmitting ? 'Đang gửi...' : 'Gửi liên hệ'}
             </Button>
         </form>
