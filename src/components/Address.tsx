@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapMarkerAlt, faEnvelope,faFaceBook, faYoutube } from "@fortawesome/free-solid-svg-icons";
+import { faMapMarkerAlt, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 
 export const Address = () => {
   return (
@@ -10,7 +10,6 @@ export const Address = () => {
           width="600"
           height="450"
           style={{ border: 0 }}
-          allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />

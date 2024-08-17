@@ -1,13 +1,10 @@
-import {buttonVariants} from "@/components/ui/button";
+// import {buttonVariants} from "@/components/ui/button";
 import {
     Card,
-    CardContent,
-    CardDescription,
     CardFooter,
     CardHeader,
-    CardTitle,
 } from "@/components/ui/card";
-import {Facebook, GithubIcon, Instagram, Linkedin, Youtube} from "lucide-react";
+// import {Facebook, GithubIcon, Instagram, Linkedin, Youtube} from "lucide-react";
 // K17
 // import GiangAvatar from '../assets/images/student/k17/GiangK17.png';
 // import AnhAvatar from '../assets/images/student/k17/NgocAnhK17.png';
@@ -34,10 +31,10 @@ import '@/assets/css/veteran-member.css'
 import {Autoplay, Keyboard, Mousewheel, Navigation, Pagination} from "swiper/modules";
 
 
-interface Course {
-    courseName: string;
-    team: TeamProps[];
-}
+// interface Course {
+//     courseName: string;
+//     team: TeamProps[];
+// }
 
 interface TeamProps {
     imageUrl: string;
@@ -313,39 +310,39 @@ const teamK18: TeamProps[] = [
 //     },
 // ];
 
-const teamVeteranMembers: Course[] = [
-    // {
-    //     courseName: "K17.3",
-    //     team: teamK17,
-    // },
-    {
-        courseName: "K18.3",
-        team: teamK18,
-    },
-    // {
-    //     courseName: "K17-18.3",
-    //     team: teamK17K18,
-    // }
-]
+// const teamVeteranMembers: Course[] = [
+//     // {
+//     //     courseName: "K17.3",
+//     //     team: teamK17,
+//     // },
+//     {
+//         courseName: "K18.3",
+//         team: teamK18,
+//     },
+//     // {
+//     //     courseName: "K17-18.3",
+//     //     team: teamK17K18,
+//     // }
+// ]
 
 export const VeteranMember2 = () => {
 
-    const socialIcon = (iconName: string) => {
-        switch (iconName) {
-            case "Linkedin":
-                return <Linkedin size="20"/>;
+    // const socialIcon = (iconName: string) => {
+    //     switch (iconName) {
+    //         case "Linkedin":
+    //             return <Linkedin size="20"/>;
 
-            case "Facebook":
-                return <Facebook size="20"/>;
+    //         case "Facebook":
+    //             return <Facebook size="20"/>;
 
-            case "Instagram":
-                return <Instagram size="20"/>;
-            case "Youtube":
-                return <Youtube size="20"/>;
-            case "Github":
-                return <GithubIcon size="20"/>;
-        }
-    };
+    //         case "Instagram":
+    //             return <Instagram size="20"/>;
+    //         case "Youtube":
+    //             return <Youtube size="20"/>;
+    //         case "Github":
+    //             return <GithubIcon size="20"/>;
+    //     }
+    // };
 
     return (
         <section
@@ -386,9 +383,7 @@ export const VeteranMember2 = () => {
             ({
               imageUrl,
               name,
-              position,
-              courseName,
-              socialNetworks,
+              position
             }: TeamProps) => (
               <SwiperSlide>
                 <div>

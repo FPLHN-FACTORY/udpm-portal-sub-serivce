@@ -1,5 +1,5 @@
-import { Button } from "./ui/button";
-import React, { useEffect, useState, useRef } from "react";
+
+import  { useEffect, useState, useRef } from "react";
 
 import image1 from "@/assets/images/background/event/1.png";
 import image2 from "@/assets/images/background/event/2.png";

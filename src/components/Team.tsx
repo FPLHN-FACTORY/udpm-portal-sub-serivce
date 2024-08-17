@@ -1,19 +1,16 @@
-import { buttonVariants } from "@/components/ui/button";
+
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
-import {
-  Facebook,
-  GithubIcon,
-  Instagram,
-  Linkedin,
-  Youtube,
-} from "lucide-react";
+// import {
+//   Facebook,
+//   GithubIcon,
+//   Instagram,
+//   Linkedin,
+//   Youtube,
+// } from "lucide-react";
 // import bitLogoText from "@/assets/images/logo/bit/transparent/svg/logo-fpl/logo-no-text.svg";
 import tiennh21Avatar from "../assets/images/teacher/tiennh21/png/tiennh21-1hand.png";
 import nguyenvv06Avatar from "../assets/images/teacher/nguyenvv06/png/nguyenvv06-vip.png";
@@ -143,22 +140,22 @@ export const Team = () => {
 
 
 
-  const socialIcon = (iconName: string) => {
-    switch (iconName) {
-      case "Linkedin":
-        return <Linkedin size="20" />;
+  // const socialIcon = (iconName: string) => {
+  //   switch (iconName) {
+  //     case "Linkedin":
+  //       return <Linkedin size="20" />;
 
-      case "Facebook":
-        return <Facebook size="20" />;
+  //     case "Facebook":
+  //       return <Facebook size="20" />;
 
-      case "Instagram":
-        return <Instagram size="20" />;
-      case "Youtube":
-        return <Youtube size="20" />;
-      case "Github":
-        return <GithubIcon size="20" />;
-    }
-  };
+  //     case "Instagram":
+  //       return <Instagram size="20" />;
+  //     case "Youtube":
+  //       return <Youtube size="20" />;
+  //     case "Github":
+  //       return <GithubIcon size="20" />;
+  //   }
+  // };
 
   return (
     <section id="team" className="container py-24 sm:py-32">
@@ -185,7 +182,7 @@ export const Team = () => {
         >
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
         {teamList.map(
-          ({ imageUrl, name, position, socialNetworks }: TeamProps) => (
+          ({ imageUrl, name, position }: TeamProps) => (
             <React.Fragment key={name}>
               <Card className="relative mt-8 mx-auto max-w-xs flex flex-col items-center bg-white rounded-[30px] shadow-lg ">
                 <CardHeader className="flex justify-center items-center pt-4 pb-2">

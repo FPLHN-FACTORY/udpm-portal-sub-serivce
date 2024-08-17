@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import  { useEffect, useRef } from 'react';
 import { Footer } from "@/components/Footer.tsx";
 import { FAQ } from "@/components/FAQ.tsx";
 import { GoogleForm } from "@/components/GoogleForm.tsx";

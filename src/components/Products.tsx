@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/card";
 
 import logoBigBIT from "@/assets/images/logo/bit/transparent/svg/logo-fpl/logo/logo-no-text.svg";
-import { useNavigate } from "react-router-dom";
 import titleIdentity from "@/assets/images/products/identity/title/title4.jpg";
 import titleIdentity2 from "@/assets/images/products/identity/title/title2.jpg";
 import titleIdentity3 from "@/assets/images/products/identity/title/title3.jpg";
@@ -34,7 +33,7 @@ import titlepdt2 from "@/assets/images/products/phatdethi/title/title2.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Grid, Pagination } from "swiper/modules";
-import { Button } from "@/components/ui/button.tsx";
+
 // {{ CSS }}
 import "swiper/css";
 import "swiper/css/grid";
@@ -223,7 +222,7 @@ const products: Products[] = [
 ];
 
 export const Products = () => {
-  const navigate = useNavigate();
+
   return (
     <section id="products" className="container py-24 sm:py-24">
       <h2 className="text-3xl md:text-4xl font-bold">
@@ -261,10 +260,8 @@ export const Products = () => {
             detail,
             userName,
             comment,
-            href,
             imageProduct1,
             imageProduct2,
-            imageProduct3,
             video,
           }: Products) => (
             <SwiperSlide key={userName}>

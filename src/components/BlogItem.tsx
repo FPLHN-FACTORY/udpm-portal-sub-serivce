@@ -1,7 +1,6 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
-// import title1 from "@/assets/images/products/event/title/title1.jpg";
-// import title2 from "@/assets/images/products/event/title/title2.jpg";
+
 import olpImages from "@/assets/images/products/achievement/olpicpc/title.png";
 import landingPageImages from "@/assets/images/products/achievement/landingpage/landingpageTitle.png";
 import goldBeeImages from "@/assets/images/products/achievement/goldbee/nghiahoangthiv2.png";
@@ -121,8 +120,15 @@ const blogOfFatory = [
 
 
 ];
+interface Post {
+  link: string;
+  imageUrl: string;
+  title: string;
+  excerpt: string;
+  date?: string;
+}
 
-const BlogCard = ({ post }) => (
+const BlogCard: React.FC<{ post: Post }> = ({ post }) =>(
   <Link to={`${post.link}`} className="block">
     <div className="max-w-sm rounded overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 rounded-3xl">
       <img

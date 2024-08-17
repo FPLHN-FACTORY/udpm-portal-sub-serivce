@@ -1,4 +1,3 @@
-import banner from "@/assets/images/background/bg-xldl-factory.png"
 
 export const Article1 = () => {
   return (

@@ -1,19 +1,10 @@
-import { buttonVariants } from "@/components/ui/button";
+
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
-import {
-  Facebook,
-  GithubIcon,
-  Instagram,
-  Linkedin,
-  Youtube,
-} from "lucide-react";
+
 // K17
 import GiangAvatar from "../assets/images/student/k17/GiangK17.png";
 import AnhAvatar from "../assets/images/student/k17/NgocAnhK17.png";
@@ -340,22 +331,22 @@ const teamK17: TeamProps[] = [
 // ]
 
 export const VeteranMember = () => {
-  const socialIcon = (iconName: string) => {
-    switch (iconName) {
-      case "Linkedin":
-        return <Linkedin size="20" />;
+  // const socialIcon = (iconName: string) => {
+  //   switch (iconName) {
+  //     case "Linkedin":
+  //       return <Linkedin size="20" />;
 
-      case "Facebook":
-        return <Facebook size="20" />;
+  //     case "Facebook":
+  //       return <Facebook size="20" />;
 
-      case "Instagram":
-        return <Instagram size="20" />;
-      case "Youtube":
-        return <Youtube size="20" />;
-      case "Github":
-        return <GithubIcon size="20" />;
-    }
-  };
+  //     case "Instagram":
+  //       return <Instagram size="20" />;
+  //     case "Youtube":
+  //       return <Youtube size="20" />;
+  //     case "Github":
+  //       return <GithubIcon size="20" />;
+  //   }
+  // };
 
   return (
     <section
@@ -400,8 +391,6 @@ export const VeteranMember = () => {
             imageUrl,
             name,
             position,
-            courseName,
-            socialNetworks,
           }: TeamProps) => (
             <SwiperSlide>
               <div>

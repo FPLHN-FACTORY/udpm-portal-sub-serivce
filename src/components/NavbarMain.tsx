@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -7,14 +7,8 @@ import {
 import {
   Sheet,
   SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { buttonVariants } from "./ui/button";
-import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "./Icons";
 import { Link } from "react-router-dom";
@@ -48,8 +42,7 @@ const routeList: RouteProps[] = [
 ];
 
 export const NavbarMain = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const productsRedirect = "products/";
+
   const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string

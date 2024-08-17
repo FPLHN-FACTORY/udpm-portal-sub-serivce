@@ -1,5 +1,5 @@
 import TienNH21Avatar from "@/assets/images/teacher/tiennh21/svg/tiennh21-1hand.svg";
-import React, { useEffect, useState, useRef } from "react";
+import  { useEffect, useState, useRef } from "react";
 export const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const imgRef = useRef(null);
