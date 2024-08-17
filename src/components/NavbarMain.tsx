@@ -16,23 +16,23 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "",
+    href: "/",
     label: "Trang chủ",
   },
   {
-    href: "aboutthefactory",
+    href: "/aboutthefactory",
     label: "Giới thiệu",
   },
   {
-    href: "products",
+    href: "/products",
     label: "Sản phẩm",
   },
   {
-    href: "recruitment",
+    href: "/recruitment",
     label: "Tuyển dụng",
   },
   {
-    href: "blog",
+    href: "/blog",
     label: "Blog",
   },
 ];
