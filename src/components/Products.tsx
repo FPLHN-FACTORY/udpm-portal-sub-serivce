@@ -58,7 +58,7 @@ const products: Products[] = [
   {
     imageLogo: logoBigBIT,
     name: "Module Đăng Ký Dự Án Tốt Nghiệp",
-    detail:"Modudel đã được triển khai với toàn quốc sinh viên FPTPolytechnic để sinh viên đăng kí đồ ắn tối nghiệp ",
+    detail:"Module đã được triển khai với toàn quốc sinh viên FPTPolytechnic để sinh viên đăng kí đồ án tối nghiệp ",
     userName: "@PortalRegisterGraduation_module",
     comment: "Module Đăng Ký Dự Án Tốt Nghiệp Bộ Môn Ứng Dụng Phần Mềm.",
     href: "/products/module?portal-register-graduation",
@@ -70,7 +70,7 @@ const products: Products[] = [
   {
     imageLogo: logoBigBIT,
     name: "Module Phát đề thi",
-    detail:"Modudel đã được sử dụng để sinh viên ngành ứng dụng phần khi thi thực hành cuối kì",
+    detail:"Module đã được sử dụng để sinh viên ngành ứng dụng phần khi thi thực hành cuối kì",
     userName: "@PortalRegisterGraduation_module",
     comment: "Module Phát Đề Thi Bộ Môn Ứng Dụng Phần Mềm.",
     href: "/products/module?portal-register-graduation",
@@ -82,7 +82,7 @@ const products: Products[] = [
   {
     imageLogo: logoBigBIT,
     name: "Quản Lý Bài Viết",
-    detail:"Modudel đã được sử dụng để quản lý bài viết của các giảng viên trong bộ môn Ứng Dụng Phần Mềm",
+    detail:"Module đã được sử dụng để quản lý bài viết của các giảng viên trong bộ môn Ứng Dụng Phần Mềm",
     userName: "@PortalArticles_module",
     comment:
       "Module Quản lý Bài Viết Toàn Quốc Trong Hệ thống FPT Polytechnic.",
@@ -96,7 +96,7 @@ const products: Products[] = [
   {
     imageLogo: logoBigBIT,
     name: "Quản Lý Sự Kiện",
-    detail:"Modudel đã được sử dụng để quản lý sự kiện của phòng sự kiện của FPTPolytechnic",
+    detail:"Module đã được sử dụng để quản lý sự kiện của phòng sự kiện của FPTPolytechnic",
     userName: "@PortalEvent_module",
     comment: "Module Quản Lý Sự Kiện Toàn Quốc Trong Hệ thống FPT Polytechnic.",
     href: "/products/module?portal-event",
