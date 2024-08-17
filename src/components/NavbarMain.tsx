@@ -16,23 +16,23 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "/",
+    href: "/udpm-portal-sub-serivce/",
     label: "Trang chủ",
   },
   {
-    href: "/aboutthefactory",
-    label: "Giới thiệu ",
+    href: "/udpm-portal-sub-serivce/aboutthefactory",
+    label: "Giới thiệu",
   },
   {
-    href: "/products",
+    href: "/udpm-portal-sub-serivce/products",
     label: "Sản phẩm",
   },
   {
-    href: "/recruitment",
+    href: "/udpm-portal-sub-serivce/recruitment",
     label: "Tuyển dụng",
   },
   {
-    href: "/blog",
+    href: "/udpm-portal-sub-serivce/blog",
     label: "Blog",
   },
 ];
