@@ -17,7 +17,7 @@ export const Address = () => {
       <div className="ml-[100px] mt-[70px]">
         <h2 className="text-3xl lg:text-4xl font-bold md:text-left ">
           Văn phòng của{" "}
-          <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text text-orange-600">
+          <span className="bg-gradient-to-b  text-transparent bg-clip-text text-orange-600">
             FPLHN-FACTORY
           </span>
         </h2>

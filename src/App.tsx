@@ -3,12 +3,12 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {MainRouter} from "@/layout/main/MainRouter.tsx";
 import {ScrollToTop} from "@/components/ScrollToTop.tsx";
 import {ProductsRouter} from "@/layout/product/ProductsRouter.tsx";
-import { AboutTheFactoryRouter } from "./components/aboutthefactory/AboutTheFactoryRouter";
-import { RecruitmentRouter } from "./components/recruitment/RecruitmentRouter";
-import { BlogRouter } from "./components/blog/BlogRouter";
-import { Blog1Router } from "./components/blog/Blog1Router";
-import UseScrollToTop from "./components/UseScrollToTop";
-import { Blog2Router } from "./components/blog/Blog2Router";
+import { AboutTheFactoryRouter } from "@/components/aboutthefactory/AboutTheFactoryRouter";
+import { RecruitmentRouter } from "@/components/recruitment/RecruitmentRouter";
+import { BlogRouter } from "@/components/blog/BlogRouter";
+import { Blog1Router } from "@/components/blog/Blog1Router";
+import UseScrollToTop from "@/components/UseScrollToTop";
+import { Blog2Router } from "@/components/blog/Blog2Router";
 // import { useEffect } from 'react';
 // import { useLocation } from 'react-router-dom';
 function App() {

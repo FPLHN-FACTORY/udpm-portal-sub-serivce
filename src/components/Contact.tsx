@@ -120,7 +120,7 @@ export const Contact = () => {
    <ToastContainer/>
 <h3 className="text-center text-4xl md:text-5xl font-bold">
                     Liên hệ{" "}
-                    <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text text-orange-600">
+                    <span className="bg-gradient-to-b  text-transparent bg-clip-text text-orange-600">
                         FPLHN-FACTORY
                     </span>
                 </h3>

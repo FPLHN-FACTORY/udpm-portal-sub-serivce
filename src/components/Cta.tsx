@@ -77,7 +77,7 @@ export const Cta = () => {
               thành sự nghiệp!"
             </p>
             <Link
-              to="/udpm-portal-sub-serivce/recruitment"
+              to="/recruitment"
               className="bg-orange-400  h-[100px] text-white px-8 py-5 rounded-md font-semibold text-[20px] hover:bg-orange-500 transition duration-300"
             >
               Ứng tuyển ngay
